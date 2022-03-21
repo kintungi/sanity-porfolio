@@ -12,21 +12,20 @@ export default function NavBar() {
 
                     <NavLink to="/post" 
                     // activeClassName="text-red-100 bg-red-700" 
-                    className="inline-flex items-center py-3 px-3 my-6 text-red-100 hover:text-green-800 active-link  ">Blog Posts</NavLink>
+                    className={({isActive}) => isActive ? "  active-nav" : "inactive-nav" }>Blog Posts</NavLink>
 
                     <NavLink to="/projects" 
                     // activeClassName="text-red-100 bg-red-700" 
-                    className="inline-flex items-center py-3 px-3 my-6 rounded text-red-100 hover:text-green-800 active-link">Projects</NavLink>
+                    className={({isActive}) => isActive ? "  active-nav" : "inactive-nav" }>Projects</NavLink>
 
                     <NavLink to="/about" 
                     // activeClassName="text-red-100 bg-red-700" 
-                    className="inline-flex items-center py-3 px-3 my-6 text-red-100 hover:text-green-800  active-link">About me</NavLink>
+                    className={({isActive}) => isActive ? "  active-nav" : "inactive-nav" }>About me</NavLink>
                 </nav>
                 <div className="flex items-center py-3 px-3 my-6">
                     <SocialIcon url="https://www.instagram.com/franciskintungi/" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
                     <SocialIcon url="https://www.linkedin.com/in/franciskintungi/" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
                     <SocialIcon url="https://github.com/kintungi" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
-                    
                 </div>
             </div>
         </header>
